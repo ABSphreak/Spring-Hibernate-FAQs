@@ -1,3 +1,15 @@
+## Instructions
+- For best viewing experience on your phone switch to Desktop Mode
+- To view the entire page on phone click on **View all of README.md**
+- Best viewed on PC
+
+## Navigation
+- [Hibernate FAQs](#hibernate-faqs)
+- [Spring FAQs](#spring-faqs)
+
+
+* * *
+
 ## Hibernate FAQs
 
 1. __`hibernate.cfg.xml` file__<br>
@@ -13,33 +25,30 @@
       - create-drop
       - validate
 
-2. __Persistent Object & Collection Object__<br>
+2. __Persistent Object__<br>
    Persistent Object : <br>
    > Persistent objects are instances of POJO classes that you create that represent rows in the table in the database.
    > According to hibernate-doc an instance of POJO class representing table in database goes through 3 states of which persistent is one of them.
 
-   Collection Object : <br>
-
 3. __Bag Collection__<br>
    A Bag is a java collection that stores elements without caring about the sequencing, but allow duplicate elements in the list. A bag is a random grouping of the objects in the list. A Collection is mapped with a `<bag>` element in the mapping table and initialized with `java.util.ArrayList`.
 
-4. __Collection Mapping in Hibernate using XML__<br>
-5. __In which state object is not associated with Session__<br>
+4. __In which state object is not associated with Session__<br>
    Transient & Detached
 
-6. __Different `@Annotations` in Hibernate__<br>
+5. __Different `@Annotations` in Hibernate__<br>
    - `@Entity`
    - `@Column`
    - `@Id`
    - `@GeneratedValue`
 
-7. __Different types of Association Mapping in Hibernate__<br>
+6. __Different types of Association Mapping in Hibernate__<br>
    - OneToOne
    - OneToMany
    - ManyToOne
    - ManyToMany
 
-8. __`get()` v/s `load()`__<br>
+7. __`get()` v/s `load()`__<br>
     <table>
         <tr>
             <th><samp>get()</samp></th>
@@ -63,7 +72,7 @@
         </tr>
     </table>
 
-9. __Different Hibernate Inheritence Strategies__<br>
+8. __Different Hibernate Inheritence Strategies__<br>
     - Table Per Hierarchy
       - `@Inheritance(strategy=InheritanceType.SINGLE_TABLE) `
     - Table Per Concrete class
@@ -71,7 +80,7 @@
     - Table Per Subclass
       - `@Inheritance(strategy=InheritanceType.JOINED)`
 
-10. __First Level Cache & Second Level Cache__<br>
+9.  __First Level Cache & Second Level Cache__<br>
     First Level Cache:
     > First level is maintained at the Session level and accessible only to the Session.
     > Can use the first level cache to store local data i.e. the data which is needed by the Session
@@ -80,43 +89,43 @@
     > Second level cache is maintained at the SessionFactory level and available to all Sessions.
     > Can use the second level cache to store global data i.e. something which can be shared across sessions.
 
-11. __Hibernate Architecture Layers__<br>
+10. __Hibernate Architecture Layers__<br>
     3 Main Layers
     - Java Application Layer
     - Hibernate Framework Layer
     - Backend API Layer _(Optional)_
     - DB Layer
 
-12. __What is Hibernate?__<br>
+11. __What is Hibernate?__<br>
     Hibernate is a Java framework that simplifies the development of Java application to interact with the database. It is an open source, lightweight, ORM (Object Relational Mapping) tool. Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
 
-13. __Configuration in Hibernate__<br>
+12. __Configuration in Hibernate__<br>
     - Combination of Configuration XML and Mapping XML file
     - Annotations
 
-14. __Advantages and Jobs of ORM__<br>
+13. __Advantages and Jobs of ORM__<br>
     ORM stands for Object/Relational mapping. It is the programmed and translucent perseverance of objects in a Java application in to the tables of a relational database using the metadata that describes the mapping between the objects and the database. It works by transforming the data from one representation to another.
 
     _Advantages:_
     - Speeds-up Development - eliminates the need for repetitive SQL code.
     - Overcomes vendor specific SQL differences - the ORM knows how to write vendor specific SQL so you don't have to.
 
-15. __Criteria Query & How to create it__<br>
+14. __Criteria Query & How to create it__<br>
     Hibernate provides alternate ways of manipulating objects and in turn data available in RDBMS tables. One of the methods is Criteria API, which allows you to build up a criteria query object programmatically where you can apply filtration rules and logical conditions.
 
     The Hibernate `Session` interface provides `createCriteria()` method, which can be used to create a `Criteria` object that returns instances of the persistence object's class when your application executes a criteria query.
 
-16. __Significance of `hbm2ddl.auto`__<br>
+15. __Significance of `hbm2ddl.auto`__<br>
     `hibernate.hbm2ddl.auto` Automatically validates or exports schema DDL to the database when the SessionFactory is created. With create-drop, the database schema will be dropped when the SessionFactory is closed explicitly.
     - *validate*: validate the schema, makes no changes to the database.
     - *update*: update the schema.
     - *create*: creates the schema, destroying previous data.
     - *create-drop*: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
 
-17. __Significance of Session object in Hibernate__<br>
+16. __Significance of Session object in Hibernate__<br>
     A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
 
-18. __Methods of Session object__<br>
+17. __Methods of Session object__<br>
     - `beginTransaction()`
     - `save()`
     - `update()`
@@ -128,7 +137,7 @@
     - `flush()`
     - `delete()`
 
-19. __EAGER v/s LAZY loading__<br>
+18. __EAGER v/s LAZY loading__<br>
     Lazy loading:
     > Lazy Loading. It is the default behavior of an Entity Framework, where a child entity is loaded only when it is accessed for the first time. 
     > It simply delays the loading of the related data, until you ask for it.
@@ -137,7 +146,7 @@
     > Eager Loading helps you to load all your needed entities at once; i.e., all your child entities will be loaded at single database call. 
     > This can be achieved, using the Include method, which returs the related entities as a part of the query and a large amount of data is loaded at once.
 
-20. __Significance of HQL__<br>
+19. __Significance of HQL__<br>
     It is more beneficial to use HQL instead of native SQ retrieve data from databases. The following are some of the reasons why HQL is preferred over SQL:
     - Provides full support for relational operations.
     - Return results as objects.
@@ -146,7 +155,7 @@
     - Supports many advanced features as compared to SQL, such as pagination, fetch join etc.
     - Provides database independency.
 
-21. __Important components in Hibernate Architecture__<br>
+20. __Important components in Hibernate Architecture__<br>
     - Configuration Object
     - SessionFactory Object
     - Session Object
@@ -154,7 +163,7 @@
     - Query Object
     - Criteria Object
 
-22. __LifeCycle states of an object in Hibernate__<br>
+21. __LifeCycle states of an object in Hibernate__<br>
     - Transient State
       > A transient state is one where hibernate session is not associated with the object instance and does not represent a row in the database table.
     - Persistent State
@@ -164,11 +173,11 @@
     - Removed State
       > When the persistent object is deleted from the database, it is passed to the session’s `delete(obj)` method. At this state, java instance exists but any changes made to the object are not saved to the database. 
 
-23. __Different annotations used in `@ManyToMany` Association__<br>
+22. __Different annotations used in `@ManyToMany` Association__<br>
     - `@JoinTable`
     - `@JoinColumn`
 
-24. __Properties in `HBM XML` file__<br>
+23. __Properties in `HBM XML` file__<br>
     - The mapping document is an XML document having `<hibernate-mapping>` as the root element, which contains all the `<class>` elements.
 
     - The `<class>` elements are used to define specific mappings from a Java classes to the database tables. The Java class name is specified using the name attribute of the class element and the database table name is specified using the table attribute.
@@ -181,7 +190,7 @@
 
     - The `<property>` element is used to map a Java class property to a column in the database table. The name attribute of the element refers to the property in the class and the column attribute refers to the column in the database table. The type attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
 
-25. __Named Query & Criteria Query__<br>
+24. __Named Query & Criteria Query__<br>
     - Named Query:
       > A named query is a statically defined query with a predefined unchangeable query string. They're validated when the session factory is created, thus making the application to fail fast in case of an error.
     - Criteria Query:
