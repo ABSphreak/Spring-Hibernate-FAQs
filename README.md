@@ -52,7 +52,7 @@
    - ManyToMany
 
 7. __`get()` v/s `load()`__<br>
-    <table>
+    <table align="center">
         <tr>
             <th><samp>get()</samp></th>
             <td><samp>load()</samp></th>
@@ -175,8 +175,9 @@
       > In this state, the persistent object still exists after the closure of the active session. In other words, the changes to the pojo object will not be reflected in the database and vice-versa.
     - Removed State
       > When the persistent object is deleted from the database, it is passed to the session’s `delete(obj)` method. At this state, java instance exists but any changes made to the object are not saved to the database.
+      
       <br>
-      <img src="/objectLifeCycle.jpeg" alt="Object LifeCycle in Hibernate" align="center">
+      <img src="/objectLifeCycle.jpeg" alt="Object LifeCycle in Hibernate" style="align: center;">
 
 22. __Different annotations used in `@ManyToMany` Association__<br>
     - `@JoinTable`
@@ -257,7 +258,7 @@
 ## Spring FAQs
 
 1. __BeanFactory v/s ApplicationContext__<br>
-    <table>
+    <table align="center">
         <tr>
             <th>BeanFactory</th>
             <td>ApplicationContext</th>
