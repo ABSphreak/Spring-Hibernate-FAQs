@@ -62,10 +62,6 @@
             <td><samp>load()</samp> should be used if you are sure that instance exists.</td>
         </tr>
     </table>
- 
-    | 
-    | 
-    | 
 
 9. __Different Hibernate Inheritence Strategies__<br>
     - Table Per Hierarchy
@@ -172,9 +168,31 @@
     - `@JoinTable`
     - `@JoinColumn`
 
+24. __Properties in `HBM XML` file__<br>
+    - The mapping document is an XML document having `<hibernate-mapping>` as the root element, which contains all the `<class>` elements.
+
+    - The `<class>` elements are used to define specific mappings from a Java classes to the database tables. The Java class name is specified using the name attribute of the class element and the database table name is specified using the table attribute.
+
+    - The `<meta>` element is optional element and can be used to create the class description.
+
+    - The `<id>` element maps the unique ID attribute in class to the primary key of the database table. The name attribute of the id element refers to the property in the class and the column attribute refers to the column in the database table. The type attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
+
+    - The `<generator>` element within the id element is used to generate the primary key values automatically. The class attribute of the generator element is set to native to let hibernate pick up either identity, sequence, or hilo algorithm to create primary key depending upon the capabilities of the underlying database.
+
+    - The `<property>` element is used to map a Java class property to a column in the database table. The name attribute of the element refers to the property in the class and the column attribute refers to the column in the database table. The type attribute holds the hibernate mapping type, this mapping types will convert from Java to SQL data type.
+
+25. __Named Query & Criteria Query__<br>
+    - Named Query:
+      > A named query is a statically defined query with a predefined unchangeable query string. They're validated when the session factory is created, thus making the application to fail fast in case of an error.
+    - Criteria Query:
+      > The Hibernate Criteria Query Language (HCQL) is used to fetch the records based on the specific criteria. The Criteria interface provides methods to apply criteria such as retreiving all the records of table whose salary is greater than 50000 etc.
+
+
+
+
 
 <hr>
-
+ 
 
 ## Spring FAQs
 
@@ -248,8 +266,11 @@
    - This annotation maps HTTP requests to handler methods of MVC and REST controllers.
    - The `@RequestMapping` annotation can be applied to class-level and/or method-level in a controller.
 
-6. __`@Path` Variable__<br>
-   It is used to pass parameter along with the url, sometimes we need to pass parameters along with the url to get the data. Spring MVC provides support for customizing the URL in order to get data. To achieving this purpose @PathVariable annotation is used in Spring mvc framework.
+6. __`@PathVariable` & `@RequestParam`__<br>
+   - `@PathVariable`
+     > It is used to pass parameter along with the url, sometimes we need to pass parameters along with the url to get the data. Spring MVC provides support for customizing the URL in order to get data. To achieving this purpose `@PathVariable` annotation is used in Spring mvc framework.
+   - `@RequestParam`
+     > In Spring MVC, the `@RequestParam` annotation is used to read the form data and bind it automatically to the parameter present in the provided method.
 
 7. __Declarative Transaction Management in Spring__<br>
    Declarative transaction management approach allows you to manage the transaction with the help of configuration instead of hard coding in your source code. This means that you can separate transaction management from the business code. You only use annotations or XML based configuration to manage the transactions. The bean configuration will specify the methods to be transactional.
@@ -275,7 +296,7 @@
      - `@Service`
      - `@Repository`
 
-9. __Role of Controller in Spring__<br>
+9.  __Role of Controller in Spring__<br>
     - A controller contains the business logic of an application. Here, the @Controller annotation is used to mark the class as the controller.
     - A front controller is defined as a controller that handles all requests for a Web Application. DispatcherServlet servlet is the front controller in Spring MVC that intercepts every request and then dispatches requests to an appropriate controller.
 
@@ -313,12 +334,41 @@
     - Spring AOP Module
     - Spring WEB-MVC Module
 
-16. 
+16. __Autowiring Collection Types__<br>
+    1. *autowire byName* – For this type of autowiring, setter method is used for dependency injection. Also the variable name should be same in the class where we will inject the dependency and in the spring bean configuration file.
+    2. *autowire byType* – For this type of autowiring, class type is used. So there should be only one bean configured for this type in the spring bean configuration file.
+    3. *autowire by constructor* – This is almost similar to autowire byType, the only difference is that constructor is used to inject the dependency.
+    4. *autowire by autodetect* – If you are on Spring 3.0 or older versions, this is one of the autowire options available. This option was used for autowire by constructor or byType, as determined by Spring container. 
+    5. *`@Autowired` annotation* – We can use Spring `@Autowired` annotation for spring bean autowiring. `@Autowired` annotation can be applied on variables and methods for autowiring byType. We can also use `@Autowired` annotation on constructor for constructor based spring autowiring.
+    6. *`@Qualifier`annotation* – This annotation is used to avoid conflicts in bean mapping and we need to provide the bean name that will be used for autowiring. This way we can avoid issues where multiple beans are defined for same type. This annotation usually works with the `@Autowired` annotation. For constructors with multiple arguments, we can use this annotation with the argument names in the method.
 
+17. __What is `ModelAndView`?__<br>
+    `ModelAndView` is an object that holds both the model and view. The handler returns the `ModelAndView` object and `DispatcherServlet` resolves the view using View Resolvers and View. The View is an object which contains view name in the form of the String and model is a map to add multiple objects.
 
+18. __View Resolvers__<br>
+    - Spring MVC Framework provides the ViewResolver interface, that maps view names to actual views.
+    - It also provides the View interface, which addresses the request of a view to the view technology. So when a ModelAndView instance is returned by a Controller, the view resolver will resolve the view according to the view name.
+    - *Types*:
+      - `AbstractCachingViewResolver`
+      - `XmlViewResolver`
+      - `ResourceBundleViewResolver`
+      - `UrlBasedViewResolver`
+      - `InternalResourceViewResolver`
+      - `ContentNegotiatingViewResolver`
 
+19. __`@ModelAttribute` Annotation__<br>
+    - Firstly, it can be used to inject data objects the model before a JSP loads. This makes it particularly useful in ensuring that a JSP has all the data is needs to display itself. The injection is achieved by binding a method return value to the model.
+    - Secondly, it can be used to read data from an existing model assigning it to handler method parameters.
 
+20. __Locating `hibernate.cfg.xml` file__<br>
+    To ask Hibernate look for your `hibernate.cfg.xml` file in other directory, you can modify the default Hibernate’s SessionFactory class by passing your `hibernate.cfg.xml` file path as an argument into the `configure()` method:
+    ```java
+    SessionFactory sessionFactory = new Configuration()
+    .configure("/com/mkyong/persistence/hibernate.cfg.xml")
+    .buildSessionFactory();
 
+    return sessionFactory;
+    ```
 
 
 
