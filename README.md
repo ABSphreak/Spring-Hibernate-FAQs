@@ -236,7 +236,16 @@
     - `@JoinColumn`
       - `@JoinColumn`
 
+28. __`MappedBy` & `@JoinColumn` usage__<br>
+    JPA Relationships can be either unidirectional or bidirectional. It simply means we can model them as an attribute on exactly one of the associated entities or both.
 
+    Defining the direction of the relationship between entities has no impact on the database mapping. It only defines the directions in which we use that relationship in our domain model.
+
+    For a bidirectional relationship, we usually define:
+    - the owning side
+    - inverse or the referencing side
+
+    The `@JoinColumn` annotation helps us specify the column we’ll use for joining an entity association or element collection. On the other hand, the `mappedBy` attribute is used to define the referencing side (non-owning side) of the relationship.
 
 
 
