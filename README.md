@@ -350,9 +350,10 @@
 
 8. __Configuring a bean through Annotations__<br>
    - `@Component`
-     - `@Controller`
-     - `@Service`
-     - `@Repository`
+     Spring Component annotation is used to denote a class as Component. It means that Spring framework will autodetect these classes for dependency injection when annotation-based configuration and classpath scanning is used.
+     - `@Controller`: Mostly used with web applications or REST web services to specify that the class is a front controller and responsible to handle user request and return appropriate response.
+     - `@Service`: Denotes that the class provides some services. Our utility classes can be marked as Service classes.
+     - `@Repository`: This annotation indicates that the class deals with CRUD operations, usually it’s used with DAO implementations that deal with database tables.
 
 9.  __Role of Controller in Spring__<br>
     - A controller contains the business logic of an application. Here, the @Controller annotation is used to mark the class as the controller.
@@ -427,6 +428,16 @@
 
     return sessionFactory;
     ```
+
+21. __About `InternalResourceViewResolver`__<br>
+    The `InternalResourceViewResolver` is an implementation of `ViewResolver` in Spring MVC framework which resolves logical view name e.g. "hello" to internal physical resources e.g. Servlet and JSP files e.g. jsp files placed under WEB-INF folder. It is a subclass of `UrlBasedViewResolver`, which uses "prefix" and "suffix" to convert a logical view name returned from Spring controller to map to actual, physical views.
+    *Important Points*:
+    1. When chaining ViewResolvers, an `InternalResourceViewResolver` always needs to be last, as it will attempt to resolve any view name, no matter whether the underlying resource actually exists.
+    2. The `InternalResourceViewResolver` is also the default view resolver of `DispatcherServlet` class, which acts as the front controller in Spring MVC framework.
+    3. By default, `InternalResourceViewResolver` returns `InternalResourceView` (i.e. Servlets and JSP) but it can be configured to return JstlView by using the `viewClass` attribute.
+
+22. 
+
 
 
 
