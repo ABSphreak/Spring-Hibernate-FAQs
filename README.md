@@ -210,6 +210,14 @@
     List list1 = q.list(); // iterate the list to get each page with Iterator or for loop
     ```
 
+26. __Named Parameter/Dynamic Parameter (`=:`)__<br>
+    Named parameters are as name itself suggests, the query string will be using the parameters in the variable name. That can be replaced at runtime and one advantage of using named parameter is, the same named parameter can be used many times in the same query.
+    ```java
+    String queryStr = "from Student s where s.name like :searchName";
+    List result = session.createQuery(queryStr)
+                .setString("searchName",searchNameValue)
+                .list;
+    ```
 
 <hr>
  
