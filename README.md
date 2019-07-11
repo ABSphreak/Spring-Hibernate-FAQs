@@ -177,7 +177,9 @@
       > When the persistent object is deleted from the database, it is passed to the session’s `delete(obj)` method. At this state, java instance exists but any changes made to the object are not saved to the database.
       
       <br>
-      <img src="/objectLifeCycle.jpeg" alt="Object LifeCycle in Hibernate" style="align: center;">
+      <div align="center">
+        <img src="/objectLifeCycle.jpeg" alt="Object LifeCycle in Hibernate">
+      </div>
 
 22. __Different annotations used in `@ManyToMany` Association__<br>
     - `@JoinTable`
