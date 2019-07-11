@@ -175,7 +175,8 @@
       > In this state, the persistent object still exists after the closure of the active session. In other words, the changes to the pojo object will not be reflected in the database and vice-versa.
     - Removed State
       > When the persistent object is deleted from the database, it is passed to the session’s `delete(obj)` method. At this state, java instance exists but any changes made to the object are not saved to the database.
-      <![Object LifeCycle in Hibernate](/objectLifeCycle.jpeg)>
+      <br>
+      <img src="/objectLifeCycle.jpeg" alt="Object LifeCycle in Hibernate" align="center">
 
 22. __Different annotations used in `@ManyToMany` Association__<br>
     - `@JoinTable`
