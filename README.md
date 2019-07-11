@@ -219,6 +219,27 @@
                 .list;
     ```
 
+27. __JPA Annotations__<br>
+    Package : `javax.persistence`
+    - `@Entity`
+    - `@Table`
+    - `@Column`
+      - `@Id`
+    - `@GeneratedValue`
+    - `@OrderBy`
+    - `@Transient`
+    - Mapping Annotations:
+      - `@OneToOne`
+      - `@OneToMany`
+      - `@ManyToMany`
+    - `@PrimaryKeyJoinColumn`
+    - `@JoinColumn`
+      - `@JoinColumn`
+
+
+
+
+
 <hr>
  
 
