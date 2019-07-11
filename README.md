@@ -40,12 +40,32 @@
    - ManyToMany
 
 8. __`get()` v/s `load()`__<br>
-   `get()`|`load()`
-   ----------|----------
-   Returns null if an object is not found. | Throws ObjectNotFoundException if an object is not found.
-   get() method always hit the database. | load() method doesn't hit the database.
-   get() returns the real object, not the proxy. | load() returns proxy object.
-   get() should be used if you are not sure about the existence of instance. | load() should be used if you are sure that instance exists.
+    <table>
+        <tr>
+            <th><samp>get()</samp></th>
+            <td><samp>load()</samp></th>
+        </tr>
+        <tr>
+            <td>Returns null if an object is not found.</td>
+            <td>Throws ObjectNotFoundException if an object is not found.</td>
+        </tr>
+        <tr>
+            <td><samp>get()</samp> method always hit the database.</td>
+            <td><samp>load()</samp> method doesn't hit the database.</td>
+        </tr>
+        <tr>
+            <td><samp>get()</samp> returns the real object, not the proxy.</td>
+            <td><samp>load()</samp> returns proxy object.</td>
+        </tr>
+        <tr>
+            <td><samp>get()</samp> should be used if you are not sure about the existence of instance.</td>
+            <td><samp>load()</samp> should be used if you are sure that instance exists.</td>
+        </tr>
+    </table>
+ 
+    | 
+    | 
+    | 
 
 9. __Different Hibernate Inheritence Strategies__<br>
     - Table Per Hierarchy
@@ -74,33 +94,33 @@
 12. __What is Hibernate?__<br>
     Hibernate is a Java framework that simplifies the development of Java application to interact with the database. It is an open source, lightweight, ORM (Object Relational Mapping) tool. Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
 
-14. __Configuration in Hibernate__<br>
+13. __Configuration in Hibernate__<br>
     - Combination of Configuration XML and Mapping XML file
     - Annotations
 
-15. __Advantages and Jobs of ORM__<br>
+14. __Advantages and Jobs of ORM__<br>
     ORM stands for Object/Relational mapping. It is the programmed and translucent perseverance of objects in a Java application in to the tables of a relational database using the metadata that describes the mapping between the objects and the database. It works by transforming the data from one representation to another.
 
     _Advantages:_
     - Speeds-up Development - eliminates the need for repetitive SQL code.
     - Overcomes vendor specific SQL differences - the ORM knows how to write vendor specific SQL so you don't have to.
 
-16. __Criteria Query & How to create it__<br>
+15. __Criteria Query & How to create it__<br>
     Hibernate provides alternate ways of manipulating objects and in turn data available in RDBMS tables. One of the methods is Criteria API, which allows you to build up a criteria query object programmatically where you can apply filtration rules and logical conditions.
 
     The Hibernate `Session` interface provides `createCriteria()` method, which can be used to create a `Criteria` object that returns instances of the persistence object's class when your application executes a criteria query.
 
-17. __Significance of `hbm2ddl.auto`__<br>
+16. __Significance of `hbm2ddl.auto`__<br>
     `hibernate.hbm2ddl.auto` Automatically validates or exports schema DDL to the database when the SessionFactory is created. With create-drop, the database schema will be dropped when the SessionFactory is closed explicitly.
     - *validate*: validate the schema, makes no changes to the database.
     - *update*: update the schema.
     - *create*: creates the schema, destroying previous data.
     - *create-drop*: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
 
-18. __Significance of Session object in Hibernate__<br>
+17. __Significance of Session object in Hibernate__<br>
     A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
 
-19. __Methods of Session object__<br>
+18. __Methods of Session object__<br>
     - `beginTransaction()`
     - `save()`
     - `update()`
@@ -112,7 +132,7 @@
     - `flush()`
     - `delete()`
 
-20. __EAGER v/s LAZY loading__<br>
+19. __EAGER v/s LAZY loading__<br>
     Lazy loading:
     > Lazy Loading. It is the default behavior of an Entity Framework, where a child entity is loaded only when it is accessed for the first time. 
     > It simply delays the loading of the related data, until you ask for it.
@@ -121,7 +141,7 @@
     > Eager Loading helps you to load all your needed entities at once; i.e., all your child entities will be loaded at single database call. 
     > This can be achieved, using the Include method, which returs the related entities as a part of the query and a large amount of data is loaded at once.
 
-21. __Significance of HQL__<br>
+20. __Significance of HQL__<br>
     It is more beneficial to use HQL instead of native SQ retrieve data from databases. The following are some of the reasons why HQL is preferred over SQL:
     - Provides full support for relational operations.
     - Return results as objects.
@@ -130,7 +150,7 @@
     - Supports many advanced features as compared to SQL, such as pagination, fetch join etc.
     - Provides database independency.
 
-22. __Important components in Hibernate Architecture__<br>
+21. __Important components in Hibernate Architecture__<br>
     - Configuration Object
     - SessionFactory Object
     - Session Object
@@ -138,7 +158,7 @@
     - Query Object
     - Criteria Object
 
-23. __LifeCycle states of an object in Hibernate__<br>
+22. __LifeCycle states of an object in Hibernate__<br>
     - Transient State
       > A transient state is one where hibernate session is not associated with the object instance and does not represent a row in the database table.
     - Persistent State
@@ -148,7 +168,7 @@
     - Removed State
       > When the persistent object is deleted from the database, it is passed to the session’s `delete(obj)` method. At this state, java instance exists but any changes made to the object are not saved to the database. 
 
-24. __Different annotations used in `@ManyToMany` Association__<br>
+23. __Different annotations used in `@ManyToMany` Association__<br>
     - `@JoinTable`
     - `@JoinColumn`
 
