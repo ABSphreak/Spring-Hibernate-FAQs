@@ -159,11 +159,24 @@
 ## Spring FAQs
 
 1. __BeanFactory v/s ApplicationContext__<br>
-    BeanFactory | ApplicationContext
-    ----------------|--------------------
-    This is the root interface for accessing the Spring container. | The ApplicationContext is the central interface within a Spring application that is used for providing configuration information to the application.
-    Provides object when `getBean()` is called | Provides a singleton object as soon as the instance of ApplicationContext IOC is created 
-   `XMLBeanFactory`|`ClassPathXmlApplicationContext`
+    <table>
+        <th>
+            <td>`BeanFactory`</td>
+            <td>`ApplicationContext`</td>
+        </th>
+        <tr>
+            <td>This is the root interface for accessing the Spring container.</td>
+            <td>The ApplicationContext is the central interface within a Spring application that is used for providing configuration information to the application.</td>
+        </tr>
+        <tr>
+            <td>Provides object when `getBean()` is called.</td>
+            <td>Provides a singleton object as soon as the instance of ApplicationContext IOC is created.</td>
+        </tr>
+        <tr>
+            <td>`XMLBeanFactory`</td>
+            <td>`ClassPathXmlApplicationContext`</td>
+        </tr>
+    </table>
 
 2. __Basic Spring Configuration File__<br>
    Spring configuration file is a file with `.xml` extension and the file contains information about the classes and interfaces and their dependencies. Using this file the spring container controls the life cycle of a spring bean and also Dependency Injection is achieved.
@@ -271,5 +284,29 @@
         > Aspect-Oriented Programming (AOP) is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns.
     - DI:
         > Dependency Injection (DI) is a design pattern used to implement IoC. It allows the creation of dependent objects outside of a class and provides those objects to a class through different ways. Using DI, we move the creation and binding of the dependent objects outside of the class that depends on them.
+
+15. __Basic Spring Modules__ <br>
+    - Spring Core Module
+    - Spring Context Module
+    - Spring DAO Module
+    - Spring ORM Module
+    - Spring AOP Module
+    - Spring WEB-MVC Module
+
+16. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Working on more content! Check soon (of course before exam)
