@@ -160,21 +160,21 @@
 
 1. __BeanFactory v/s ApplicationContext__<br>
     <table>
-        <th>
-            <td>`BeanFactory`</td>
-            <td>`ApplicationContext`</td>
-        </th>
+        <tr>
+            <th>BeanFactory</th>
+            <td>ApplicationContext</th>
+        </tr>
         <tr>
             <td>This is the root interface for accessing the Spring container.</td>
             <td>The ApplicationContext is the central interface within a Spring application that is used for providing configuration information to the application.</td>
         </tr>
         <tr>
-            <td>Provides object when `getBean()` is called.</td>
+            <td>Provides object when <code>getBean()</code> is called.</td>
             <td>Provides a singleton object as soon as the instance of ApplicationContext IOC is created.</td>
         </tr>
         <tr>
-            <td>`XMLBeanFactory`</td>
-            <td>`ClassPathXmlApplicationContext`</td>
+            <td><code>XMLBeanFactory</code></td>
+            <td><code>ClassPathXmlApplicationContext</code></td>
         </tr>
     </table>
 
