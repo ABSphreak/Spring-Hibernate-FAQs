@@ -436,7 +436,13 @@
     2. The `InternalResourceViewResolver` is also the default view resolver of `DispatcherServlet` class, which acts as the front controller in Spring MVC framework.
     3. By default, `InternalResourceViewResolver` returns `InternalResourceView` (i.e. Servlets and JSP) but it can be configured to return JstlView by using the `viewClass` attribute.
 
-
+22. __`@Resource` Annotation__<br>
+    `@Resource` is the annotaion that will help to extract beans from the container.<br>
+    There are several lookup options to extract beans:
+    - Match by Name
+    - Match by Type
+    - Match by Qualifier<br>
+    Using @Resource without any parameters will trigger Match by Type lookup type.
 
 
 
