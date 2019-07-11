@@ -3,9 +3,9 @@
 - To view the entire page on phone click on **View all of README.md**
 - Best viewed on PC
 
-## Navigation
-- [Hibernate FAQs](#hibernate-faqs)
-- [Spring FAQs](#spring-faqs)
+- [Instructions](#Instructions)
+- [Hibernate FAQs](#Hibernate-FAQs)
+- [Spring FAQs](#Spring-FAQs)
 
 
 * * *
@@ -14,10 +14,10 @@
 
 1. __`hibernate.cfg.xml` file__<br>
    `hibernate.cfg.xml` file is used to configure various properties for Hibernate framework
-    - `connection.driver_class`
-    - `connection.url`
-    - `connection.username`, `connection.password`
-    - `dialect` ➜
+    - `connection.driver_class` ➜ The JDBC driver class
+    - `connection.url` ➜ JDBC connection String
+    - `connection.username`, `connection.password` ➜ Username and Password for DB
+    - `dialect` ➜ This property makes Hibernate generate the appropriate SQL for the chosen database
     - `show_sql` ➜ used to show the generated SQL on console
     - `hbm2ddl.auto` ➜ creates the table automatically
       - create
@@ -384,8 +384,5 @@
 
 
 
-
-
-
-
-### Working on more content! Check soon (of course before exam)
+<p align="center">Made with ❤ by <a href="https://abhinavsharma.dev/">Abhinav Sharma</a>]</p>
+<p align="center">Keep updating the page! More content maybe up!</p>
