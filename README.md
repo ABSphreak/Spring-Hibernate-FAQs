@@ -445,7 +445,15 @@
     <br>
     Using @Resource without any parameters will trigger Match by Type lookup type.
 
-
+23. __Attributes of `<bean>` tag__<br>
+    - *name / id*: This attribute specifies the bean unique identifier.
+    - *class*: This attribute is mandatory and specify the bean class to be used to create the bean.
+    - *scope*: This attribute specifies the scope of the objects created from a particular bean definition.
+    - *constructor-arg*: This is used to inject the dependencies through bean constructor.
+    - *properties*: This attribute is used to inject the dependencies through setter method.
+    - *autowiring mode*: This is used to inject the dependencies.
+    - *init-method (initialization method)*: A callback to be called just after all necessary properties on the bean have been set by the container. This is part of bean lifecycle.
+    - *destroy-method (destruction method)*: A callback to be used when the container containing the bean is destroyed. This is part of bean lifecycle.
 
 
 
