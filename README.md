@@ -416,7 +416,7 @@
       - `ContentNegotiatingViewResolver`
 
 19. __`@ModelAttribute` Annotation__<br>
-    - Firstly, it can be used to inject data objects the model before a JSP loads. This makes it particularly useful in ensuring that a JSP has all the data is needs to display itself. The injection is achieved by binding a method return value to the model.
+    - Firstly, it can be used to inject data objects to the model before a JSP loads. This makes it particularly useful in ensuring that a JSP has all the data is needs to display itself. The injection is achieved by binding a method return value to the model.
     - Secondly, it can be used to read data from an existing model assigning it to handler method parameters.
 
 20. __Locating `hibernate.cfg.xml` file__<br>
