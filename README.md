@@ -384,5 +384,5 @@
 
 
 
-<p align="center">Made with ❤ by <a href="https://abhinavsharma.dev/">Abhinav Sharma</a>]</p>
+<p align="center">Made with ❤ by <a href="https://abhinavsharma.dev/">Abhinav Sharma</a></p>
 <p align="center">Keep updating the page! More content maybe up!</p>
