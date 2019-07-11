@@ -468,4 +468,4 @@
 <br>
 <h2 align="center"><a href="#navigation">⇧</a></h2>
 <p align="center">Made with ❤ by <a href="https://abhinavsharma.dev/">Abhinav Sharma</a></p>
-<p align="center">Keep updating the page! More content maybe up!</p>
+<p align="center"><i>Please check the commit history for this repository to see changelog.</i></p>
