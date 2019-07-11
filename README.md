@@ -1,12 +1,15 @@
-## Instructions
-- For best viewing experience on your phone switch to Desktop Mode
-- To view the entire page on phone click on **View all of README.md**
-- Best viewed on PC
-
+## Navigation
+- [Navigation](#Navigation)
 - [Instructions](#Instructions)
 - [Hibernate FAQs](#Hibernate-FAQs)
 - [Spring FAQs](#Spring-FAQs)
 
+
+## Instructions
+- For best viewing experience on your phone switch to Desktop Mode
+- To view the entire page on phone click on **View all of README.md**
+- Best viewed on PC
+- Please cross-check ambigous/confusing content
 
 * * *
 
