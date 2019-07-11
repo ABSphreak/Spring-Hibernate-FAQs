@@ -199,8 +199,16 @@
     - Criteria Query:
       > The Hibernate Criteria Query Language (HCQL) is used to fetch the records based on the specific criteria. The Criteria interface provides methods to apply criteria such as retreiving all the records of table whose salary is greater than 50000 etc.
 
+25. __Pagination in Hibernate__<br>
+    The idea behind Pagination Hibernate is to divide the large result set into a number of pages and fetching one page at a time. We can programmatically declare how many records should contain each page and from what record. For example, the page may contain 5 records staring from 3rd record.
 
-
+    The code is simple to do the job of Pagination Hibernate.
+    ```java
+    Query q = session.createQuery("select * from Student"); // you can use order by also 
+    q.setFirstResult(3); // starting position of the record (first record is 0, that is, 0, 1, 2, 3)
+    q.setMaxResults(5); // size of page; each page displays 5 records (3, 4, 5, 6, 7)
+    List list1 = q.list(); // iterate the list to get each page with Iterator or for loop
+    ```
 
 
 <hr>
@@ -381,7 +389,6 @@
 
     return sessionFactory;
     ```
-
 
 
 
