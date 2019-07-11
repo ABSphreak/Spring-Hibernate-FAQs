@@ -441,7 +441,8 @@
     There are several lookup options to extract beans:
     - Match by Name
     - Match by Type
-    - Match by Qualifier<br>
+    - Match by Qualifier
+    <br>
     Using @Resource without any parameters will trigger Match by Type lookup type.
 
 
