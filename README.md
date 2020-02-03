@@ -55,7 +55,7 @@
     <table align="center">
         <tr>
             <th><samp>get()</samp></th>
-            <td><samp>load()</samp></th>
+            <th><samp>load()</samp></th>
         </tr>
         <tr>
             <td>Returns null if an object is not found.</td>
@@ -263,7 +263,7 @@
     <table align="center">
         <tr>
             <th>BeanFactory</th>
-            <td>ApplicationContext</th>
+            <th>ApplicationContext</th>
         </tr>
         <tr>
             <td>This is the root interface for accessing the Spring container.</td>
